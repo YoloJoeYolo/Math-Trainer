@@ -16,6 +16,5 @@ namespace Math_Trainer
         {
             InitializeComponent();
         }
-
     }
 }
