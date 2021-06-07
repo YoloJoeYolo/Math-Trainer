@@ -16,5 +16,20 @@ namespace Math_Trainer
         {
             InitializeComponent();
         }
+
+        private void txt_Range_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Check_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Next_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

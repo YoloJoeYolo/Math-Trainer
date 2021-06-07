@@ -56,6 +56,7 @@
             this.txt_Range.Name = "txt_Range";
             this.txt_Range.Size = new System.Drawing.Size(45, 23);
             this.txt_Range.TabIndex = 1;
+            this.txt_Range.TextChanged += new System.EventHandler(this.txt_Range_TextChanged);
             // 
             // lb_Invoice
             // 
@@ -104,15 +105,17 @@
             this.btn_Check.TabIndex = 5;
             this.btn_Check.Text = "Check";
             this.btn_Check.UseVisualStyleBackColor = true;
+            this.btn_Check.Click += new System.EventHandler(this.btn_Check_Click);
             // 
             // btn_Next
             // 
-            this.btn_Next.Location = new System.Drawing.Point(257, 138);
+            this.btn_Next.Location = new System.Drawing.Point(257, 128);
             this.btn_Next.Name = "btn_Next";
-            this.btn_Next.Size = new System.Drawing.Size(75, 23);
+            this.btn_Next.Size = new System.Drawing.Size(104, 45);
             this.btn_Next.TabIndex = 6;
-            this.btn_Next.Text = "button1";
+            this.btn_Next.Text = "Next";
             this.btn_Next.UseVisualStyleBackColor = true;
+            this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
             // 
             // Form1
             // 
