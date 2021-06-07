@@ -31,10 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lb_Range = new System.Windows.Forms.Label();
             this.txt_Range = new System.Windows.Forms.TextBox();
-            this.lb_Aufgabe = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lb_Ergebnis = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lb_Invoice = new System.Windows.Forms.Label();
+            this.txt_Invoice = new System.Windows.Forms.TextBox();
+            this.lb_Result = new System.Windows.Forms.Label();
+            this.txt_Result = new System.Windows.Forms.TextBox();
+            this.btn_Check = new System.Windows.Forms.Button();
+            this.btn_Next = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lb_Range
@@ -50,50 +52,67 @@
             // 
             // txt_Range
             // 
-            this.txt_Range.Location = new System.Drawing.Point(64, 35);
+            this.txt_Range.Location = new System.Drawing.Point(45, 35);
             this.txt_Range.Name = "txt_Range";
             this.txt_Range.Size = new System.Drawing.Size(45, 23);
             this.txt_Range.TabIndex = 1;
             // 
-            // lb_Aufgabe
+            // lb_Invoice
             // 
-            this.lb_Aufgabe.AutoSize = true;
-            this.lb_Aufgabe.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lb_Aufgabe.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_Aufgabe.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lb_Aufgabe.Location = new System.Drawing.Point(192, 9);
-            this.lb_Aufgabe.Name = "lb_Aufgabe";
-            this.lb_Aufgabe.Size = new System.Drawing.Size(87, 21);
-            this.lb_Aufgabe.TabIndex = 2;
-            this.lb_Aufgabe.Text = "Rechnung:";
+            this.lb_Invoice.AutoSize = true;
+            this.lb_Invoice.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.lb_Invoice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_Invoice.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lb_Invoice.Location = new System.Drawing.Point(192, 9);
+            this.lb_Invoice.Name = "lb_Invoice";
+            this.lb_Invoice.Size = new System.Drawing.Size(87, 21);
+            this.lb_Invoice.TabIndex = 2;
+            this.lb_Invoice.Text = "Rechnung:";
             // 
-            // textBox1
+            // txt_Invoice
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.Location = new System.Drawing.Point(192, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(169, 23);
-            this.textBox1.TabIndex = 3;
+            this.txt_Invoice.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_Invoice.Location = new System.Drawing.Point(192, 35);
+            this.txt_Invoice.Name = "txt_Invoice";
+            this.txt_Invoice.ReadOnly = true;
+            this.txt_Invoice.Size = new System.Drawing.Size(169, 23);
+            this.txt_Invoice.TabIndex = 3;
             // 
-            // lb_Ergebnis
+            // lb_Result
             // 
-            this.lb_Ergebnis.AutoSize = true;
-            this.lb_Ergebnis.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_Ergebnis.Location = new System.Drawing.Point(192, 77);
-            this.lb_Ergebnis.Name = "lb_Ergebnis";
-            this.lb_Ergebnis.Size = new System.Drawing.Size(77, 21);
-            this.lb_Ergebnis.TabIndex = 4;
-            this.lb_Ergebnis.Text = "Ergebnis:";
+            this.lb_Result.AutoSize = true;
+            this.lb_Result.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_Result.Location = new System.Drawing.Point(192, 77);
+            this.lb_Result.Name = "lb_Result";
+            this.lb_Result.Size = new System.Drawing.Size(77, 21);
+            this.lb_Result.TabIndex = 4;
+            this.lb_Result.Text = "Ergebnis:";
             // 
-            // textBox2
+            // txt_Result
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox2.Location = new System.Drawing.Point(192, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(169, 23);
-            this.textBox2.TabIndex = 3;
+            this.txt_Result.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txt_Result.Location = new System.Drawing.Point(192, 101);
+            this.txt_Result.Name = "txt_Result";
+            this.txt_Result.Size = new System.Drawing.Size(169, 23);
+            this.txt_Result.TabIndex = 3;
+            // 
+            // btn_Check
+            // 
+            this.btn_Check.Location = new System.Drawing.Point(124, 130);
+            this.btn_Check.Name = "btn_Check";
+            this.btn_Check.Size = new System.Drawing.Size(108, 43);
+            this.btn_Check.TabIndex = 5;
+            this.btn_Check.Text = "Check";
+            this.btn_Check.UseVisualStyleBackColor = true;
+            // 
+            // btn_Next
+            // 
+            this.btn_Next.Location = new System.Drawing.Point(257, 138);
+            this.btn_Next.Name = "btn_Next";
+            this.btn_Next.Size = new System.Drawing.Size(75, 23);
+            this.btn_Next.TabIndex = 6;
+            this.btn_Next.Text = "button1";
+            this.btn_Next.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -101,10 +120,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.lb_Ergebnis);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lb_Aufgabe);
+            this.Controls.Add(this.btn_Next);
+            this.Controls.Add(this.btn_Check);
+            this.Controls.Add(this.txt_Result);
+            this.Controls.Add(this.lb_Result);
+            this.Controls.Add(this.txt_Invoice);
+            this.Controls.Add(this.lb_Invoice);
             this.Controls.Add(this.txt_Range);
             this.Controls.Add(this.lb_Range);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -119,10 +140,12 @@
 
         private System.Windows.Forms.Label lb_Range;
         private System.Windows.Forms.TextBox txt_Range;
-        private System.Windows.Forms.Label lb_Aufgabe;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lb_Ergebnis;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lb_Invoice;
+        private System.Windows.Forms.TextBox txt_Invoice;
+        private System.Windows.Forms.Label lb_Result;
+        private System.Windows.Forms.TextBox txt_Result;
+        private System.Windows.Forms.Button btn_Check;
+        private System.Windows.Forms.Button btn_Next;
     }
 }
 
