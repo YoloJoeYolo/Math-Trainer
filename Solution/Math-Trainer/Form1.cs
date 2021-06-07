@@ -19,7 +19,14 @@ namespace Math_Trainer
 
         private void txt_Range_TextChanged(object sender, EventArgs e)
         {
+            try
+            {
 
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void btn_Check_Click(object sender, EventArgs e)

@@ -37,6 +37,7 @@
             this.txt_Result = new System.Windows.Forms.TextBox();
             this.btn_Check = new System.Windows.Forms.Button();
             this.btn_Next = new System.Windows.Forms.Button();
+            this.lb_WrongRange = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lb_Range
@@ -117,12 +118,23 @@
             this.btn_Next.UseVisualStyleBackColor = true;
             this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
             // 
+            // lb_WrongRange
+            // 
+            this.lb_WrongRange.AutoSize = true;
+            this.lb_WrongRange.Location = new System.Drawing.Point(138, 195);
+            this.lb_WrongRange.Name = "lb_WrongRange";
+            this.lb_WrongRange.Size = new System.Drawing.Size(223, 30);
+            this.lb_WrongRange.TabIndex = 7;
+            this.lb_WrongRange.Text = "Die Eingabe der Zahlenweite ist inkorekt, \r\nbitte geben sie nur eine positive Zah" +
+    "l ein";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lb_WrongRange);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.btn_Check);
             this.Controls.Add(this.txt_Result);
@@ -149,6 +161,7 @@
         private System.Windows.Forms.TextBox txt_Result;
         private System.Windows.Forms.Button btn_Check;
         private System.Windows.Forms.Button btn_Next;
+        private System.Windows.Forms.Label lb_WrongRange;
     }
 }
 
