@@ -131,9 +131,9 @@ namespace Math_Trainer
 
         private void UpdateGUI()
         {
-            this.lb_nrOfExercises.Text = this.nrOfExercises + " Rechnungen generiert!";
-            this.lb_nrOfExercisesRight.Text = this.nrOfExercisesRight + " Rechnungen falsch!";
-            this.lb_nrOfExercisesWrong.Text = this.nrOfExercisesWrong + "0 Rechnungen richtig!";
+            this.lb_NrOfExercises.Text = this.nrOfExercises + " Rechnungen generiert!";
+            this.lb_NrOfExercisesRight.Text = this.nrOfExercisesRight + " Rechnungen falsch!";
+            this.lb_NrOfExercisesWrong.Text = this.nrOfExercisesWrong + "0 Rechnungen richtig!";
             this.lb_PercentOfCorrectAnswers.Text = "Percent of correct answers: " + ((double)this.nrOfExercisesRight / this.nrOfExercises * 100).ToString();
         }
 
@@ -155,6 +155,16 @@ namespace Math_Trainer
         private void lb_Range_MouseLeave(object sender, EventArgs e)
         {
             this.lb_InfoReset.Visible = false;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
