@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// V1.2.1
 namespace Math_Trainer
 {
     public partial class Form1 : Form
@@ -100,7 +101,7 @@ namespace Math_Trainer
                     }
                     else
                     {
-                        this.lb_Solution.Text = "Ergebnis: " this.currentTask.getResult();
+                        this.lb_Solution.Text = "Ergebnis: " +this.currentTask.getResult();
                         this.lb_Solution.Visible = true;
                     }
                     // LB mit Info aufgeben
