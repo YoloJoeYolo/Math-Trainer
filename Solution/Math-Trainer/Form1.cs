@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// V1.2.1
+// V1.3
 namespace Math_Trainer
 {
     public partial class Form1 : Form
@@ -101,7 +101,7 @@ namespace Math_Trainer
                     }
                     else
                     {
-                        this.lb_Solution.Text = "Ergebnis: " +this.currentTask.getResult();
+                        this.lb_Solution.Text = "Korektes Ergebnis: " +Environment.NewLine +this.currentTask.getResult();
                         this.lb_Solution.Visible = true;
                     }
                     // LB mit Info aufgeben
@@ -165,6 +165,54 @@ namespace Math_Trainer
         private void Form1_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        public void checkRadioButtons()
+        {
+            if (this.rb_Addition.Checked)
+            {
+                this.typOfExercise = 0;
+            }
+            else if (this.rb_Subtraction.Checked)
+            {
+                this.typOfExercise = 1;
+            }
+            else if (this.rb_Multiplikation.Checked)
+            {
+                this.typOfExercise = 2;
+            }
+            else if (this.rb_Division.Checked)
+            {
+                this.typOfExercise = 3;
+            }
+            else
+            {
+                this.typOfExercise = 4;
+            }
+        }
+
+        private void rb_Mixed_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.rb_Addition.Checked)
+            {
+                this.typOfExercise = 0;
+            }
+            else if (this.rb_Subtraction.Checked)
+            {
+                this.typOfExercise = 1;
+            }
+            else if (this.rb_Multiplikation.Checked)
+            {
+                this.typOfExercise = 2;
+            }
+            else if (this.rb_Division.Checked)
+            {
+                this.typOfExercise = 3;
+            }
+            else
+            {
+                this.typOfExercise = 4;
+            }
         }
     }
 }
