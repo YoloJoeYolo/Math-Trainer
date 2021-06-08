@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// V1.2.2
+// V1.3
 namespace Math_Trainer
 {
     public partial class Form1 : Form

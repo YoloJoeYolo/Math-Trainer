@@ -126,7 +126,7 @@
             // btn_Check
             // 
             this.btn_Check.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_Check.Location = new System.Drawing.Point(11, 191);
+            this.btn_Check.Location = new System.Drawing.Point(11, 193);
             this.btn_Check.Name = "btn_Check";
             this.btn_Check.Size = new System.Drawing.Size(108, 43);
             this.btn_Check.TabIndex = 5;
@@ -137,7 +137,7 @@
             // btn_Next
             // 
             this.btn_Next.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_Next.Location = new System.Drawing.Point(162, 191);
+            this.btn_Next.Location = new System.Drawing.Point(143, 193);
             this.btn_Next.Name = "btn_Next";
             this.btn_Next.Size = new System.Drawing.Size(108, 43);
             this.btn_Next.TabIndex = 6;
@@ -153,7 +153,7 @@
             this.lb_WrongRange.Enabled = false;
             this.lb_WrongRange.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lb_WrongRange.ForeColor = System.Drawing.Color.Black;
-            this.lb_WrongRange.Location = new System.Drawing.Point(27, 337);
+            this.lb_WrongRange.Location = new System.Drawing.Point(38, 344);
             this.lb_WrongRange.Name = "lb_WrongRange";
             this.lb_WrongRange.Size = new System.Drawing.Size(297, 44);
             this.lb_WrongRange.TabIndex = 7;
@@ -199,9 +199,9 @@
             this.gb_Statistics.Controls.Add(this.lb_NrOfExercises);
             this.gb_Statistics.Controls.Add(this.lb_NrOfExercisesWrong);
             this.gb_Statistics.Controls.Add(this.lb_NrOfExercisesRight);
-            this.gb_Statistics.Location = new System.Drawing.Point(376, 272);
+            this.gb_Statistics.Location = new System.Drawing.Point(376, 280);
             this.gb_Statistics.Name = "gb_Statistics";
-            this.gb_Statistics.Size = new System.Drawing.Size(412, 173);
+            this.gb_Statistics.Size = new System.Drawing.Size(366, 158);
             this.gb_Statistics.TabIndex = 12;
             this.gb_Statistics.TabStop = false;
             this.gb_Statistics.Text = "Auswertung";
@@ -235,7 +235,7 @@
             this.lb_WrongInput.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.lb_WrongInput.Enabled = false;
             this.lb_WrongInput.ForeColor = System.Drawing.Color.Red;
-            this.lb_WrongInput.Location = new System.Drawing.Point(11, 145);
+            this.lb_WrongInput.Location = new System.Drawing.Point(13, 145);
             this.lb_WrongInput.Name = "lb_WrongInput";
             this.lb_WrongInput.Size = new System.Drawing.Size(217, 15);
             this.lb_WrongInput.TabIndex = 13;
@@ -305,12 +305,13 @@
             // lb_TryAgain
             // 
             this.lb_TryAgain.AutoSize = true;
-            this.lb_TryAgain.BackColor = System.Drawing.Color.White;
-            this.lb_TryAgain.Location = new System.Drawing.Point(232, 53);
+            this.lb_TryAgain.BackColor = System.Drawing.Color.Transparent;
+            this.lb_TryAgain.ForeColor = System.Drawing.Color.Red;
+            this.lb_TryAgain.Location = new System.Drawing.Point(232, 109);
             this.lb_TryAgain.Name = "lb_TryAgain";
-            this.lb_TryAgain.Size = new System.Drawing.Size(106, 15);
+            this.lb_TryAgain.Size = new System.Drawing.Size(106, 30);
             this.lb_TryAgain.TabIndex = 20;
-            this.lb_TryAgain.Text = "Versuchs nochmal!";
+            this.lb_TryAgain.Text = "Falsch:\r\nVersuchs nochmal!";
             this.lb_TryAgain.Visible = false;
             // 
             // gB_Einstellungen
@@ -370,11 +371,13 @@
             // lb_Solution
             // 
             this.lb_Solution.AutoSize = true;
-            this.lb_Solution.Location = new System.Drawing.Point(241, 87);
+            this.lb_Solution.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lb_Solution.Location = new System.Drawing.Point(232, 52);
             this.lb_Solution.Name = "lb_Solution";
-            this.lb_Solution.Size = new System.Drawing.Size(61, 15);
+            this.lb_Solution.Size = new System.Drawing.Size(143, 20);
             this.lb_Solution.TabIndex = 22;
-            this.lb_Solution.Text = "Ergebenis:";
+            this.lb_Solution.Text = "Korektes Ergebenis:";
+            this.lb_Solution.Visible = false;
             // 
             // bB_CalculatingForm
             // 
