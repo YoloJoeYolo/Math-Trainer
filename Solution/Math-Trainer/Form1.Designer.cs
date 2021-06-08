@@ -38,11 +38,13 @@
             this.btn_Check = new System.Windows.Forms.Button();
             this.btn_Next = new System.Windows.Forms.Button();
             this.lb_WrongRange = new System.Windows.Forms.Label();
-            this.lb_Anzahl = new System.Windows.Forms.Label();
-            this.lb_AnzahlRichtig = new System.Windows.Forms.Label();
-            this.lb_AnzahlFalsch = new System.Windows.Forms.Label();
-            this.gB_Auswertung = new System.Windows.Forms.GroupBox();
-            this.gB_Auswertung.SuspendLayout();
+            this.lb_nrOfExercises = new System.Windows.Forms.Label();
+            this.lb_nrOfExercisesRight = new System.Windows.Forms.Label();
+            this.lb_nrOfExercisesWrong = new System.Windows.Forms.Label();
+            this.gb_statistics = new System.Windows.Forms.GroupBox();
+            this.lb_PercentOfCorrectAnswers = new System.Windows.Forms.Label();
+            this.lb_WrongInput = new System.Windows.Forms.Label();
+            this.gb_statistics.SuspendLayout();
             this.SuspendLayout();
             // 
             // lb_Range
@@ -105,74 +107,97 @@
             // 
             // btn_Check
             // 
+            this.btn_Check.BackColor = System.Drawing.SystemColors.Control;
             this.btn_Check.Location = new System.Drawing.Point(161, 149);
             this.btn_Check.Name = "btn_Check";
             this.btn_Check.Size = new System.Drawing.Size(108, 43);
             this.btn_Check.TabIndex = 5;
             this.btn_Check.Text = "Check";
-            this.btn_Check.UseVisualStyleBackColor = true;
+            this.btn_Check.UseVisualStyleBackColor = false;
             this.btn_Check.Click += new System.EventHandler(this.btn_Check_Click);
             // 
             // btn_Next
             // 
+            this.btn_Next.BackColor = System.Drawing.SystemColors.Control;
             this.btn_Next.Location = new System.Drawing.Point(275, 149);
             this.btn_Next.Name = "btn_Next";
             this.btn_Next.Size = new System.Drawing.Size(108, 43);
             this.btn_Next.TabIndex = 6;
             this.btn_Next.Text = "Next";
-            this.btn_Next.UseVisualStyleBackColor = true;
+            this.btn_Next.UseVisualStyleBackColor = false;
             this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
             // 
             // lb_WrongRange
             // 
             this.lb_WrongRange.AutoSize = true;
             this.lb_WrongRange.Enabled = false;
-            this.lb_WrongRange.Location = new System.Drawing.Point(160, 209);
+            this.lb_WrongRange.Location = new System.Drawing.Point(12, 61);
             this.lb_WrongRange.Name = "lb_WrongRange";
             this.lb_WrongRange.Size = new System.Drawing.Size(223, 30);
             this.lb_WrongRange.TabIndex = 7;
             this.lb_WrongRange.Text = "Die Eingabe der Zahlenweite ist inkorekt, \r\nbitte geben sie nur eine positive Zah" +
     "l ein";
             // 
-            // lb_Anzahl
+            // lb_nrOfExercises
             // 
-            this.lb_Anzahl.AutoSize = true;
-            this.lb_Anzahl.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_Anzahl.Location = new System.Drawing.Point(38, 52);
-            this.lb_Anzahl.Name = "lb_Anzahl";
-            this.lb_Anzahl.Size = new System.Drawing.Size(151, 20);
-            this.lb_Anzahl.TabIndex = 8;
-            this.lb_Anzahl.Text = "0 Rechnungen gelöst!";
+            this.lb_nrOfExercises.AutoSize = true;
+            this.lb_nrOfExercises.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_nrOfExercises.Location = new System.Drawing.Point(38, 52);
+            this.lb_nrOfExercises.Name = "lb_nrOfExercises";
+            this.lb_nrOfExercises.Size = new System.Drawing.Size(170, 20);
+            this.lb_nrOfExercises.TabIndex = 8;
+            this.lb_nrOfExercises.Text = "0 Rechnungen generiert!";
             // 
-            // lb_AnzahlRichtig
+            // lb_nrOfExercisesRight
             // 
-            this.lb_AnzahlRichtig.AutoSize = true;
-            this.lb_AnzahlRichtig.Location = new System.Drawing.Point(154, 129);
-            this.lb_AnzahlRichtig.Name = "lb_AnzahlRichtig";
-            this.lb_AnzahlRichtig.Size = new System.Drawing.Size(126, 15);
-            this.lb_AnzahlRichtig.TabIndex = 9;
-            this.lb_AnzahlRichtig.Text = "0 Rechnungen Richtig!";
+            this.lb_nrOfExercisesRight.AutoSize = true;
+            this.lb_nrOfExercisesRight.Location = new System.Drawing.Point(154, 129);
+            this.lb_nrOfExercisesRight.Name = "lb_nrOfExercisesRight";
+            this.lb_nrOfExercisesRight.Size = new System.Drawing.Size(123, 15);
+            this.lb_nrOfExercisesRight.TabIndex = 9;
+            this.lb_nrOfExercisesRight.Text = "0 Rechnungen richtig!";
             // 
-            // lb_AnzahlFalsch
+            // lb_nrOfExercisesWrong
             // 
-            this.lb_AnzahlFalsch.AutoSize = true;
-            this.lb_AnzahlFalsch.Location = new System.Drawing.Point(6, 129);
-            this.lb_AnzahlFalsch.Name = "lb_AnzahlFalsch";
-            this.lb_AnzahlFalsch.Size = new System.Drawing.Size(122, 15);
-            this.lb_AnzahlFalsch.TabIndex = 11;
-            this.lb_AnzahlFalsch.Text = "0 Rechnungen Falsch!";
+            this.lb_nrOfExercisesWrong.AutoSize = true;
+            this.lb_nrOfExercisesWrong.Location = new System.Drawing.Point(6, 129);
+            this.lb_nrOfExercisesWrong.Name = "lb_nrOfExercisesWrong";
+            this.lb_nrOfExercisesWrong.Size = new System.Drawing.Size(120, 15);
+            this.lb_nrOfExercisesWrong.TabIndex = 11;
+            this.lb_nrOfExercisesWrong.Text = "0 Rechnungen falsch!";
+            this.lb_nrOfExercisesWrong.MouseHover += new System.EventHandler(this.lb_nrOfExercisesWrong_MouseHover);
             // 
-            // gB_Auswertung
+            // gb_statistics
             // 
-            this.gB_Auswertung.Controls.Add(this.lb_Anzahl);
-            this.gB_Auswertung.Controls.Add(this.lb_AnzahlFalsch);
-            this.gB_Auswertung.Controls.Add(this.lb_AnzahlRichtig);
-            this.gB_Auswertung.Location = new System.Drawing.Point(52, 252);
-            this.gB_Auswertung.Name = "gB_Auswertung";
-            this.gB_Auswertung.Size = new System.Drawing.Size(309, 173);
-            this.gB_Auswertung.TabIndex = 12;
-            this.gB_Auswertung.TabStop = false;
-            this.gB_Auswertung.Text = "Auswertung";
+            this.gb_statistics.Controls.Add(this.lb_PercentOfCorrectAnswers);
+            this.gb_statistics.Controls.Add(this.lb_nrOfExercises);
+            this.gb_statistics.Controls.Add(this.lb_nrOfExercisesWrong);
+            this.gb_statistics.Controls.Add(this.lb_nrOfExercisesRight);
+            this.gb_statistics.Location = new System.Drawing.Point(52, 252);
+            this.gb_statistics.Name = "gb_statistics";
+            this.gb_statistics.Size = new System.Drawing.Size(438, 173);
+            this.gb_statistics.TabIndex = 12;
+            this.gb_statistics.TabStop = false;
+            this.gb_statistics.Text = "Auswertung";
+            // 
+            // lb_PercentOfCorrectAnswers
+            // 
+            this.lb_PercentOfCorrectAnswers.AutoSize = true;
+            this.lb_PercentOfCorrectAnswers.Location = new System.Drawing.Point(259, 57);
+            this.lb_PercentOfCorrectAnswers.Name = "lb_PercentOfCorrectAnswers";
+            this.lb_PercentOfCorrectAnswers.Size = new System.Drawing.Size(177, 15);
+            this.lb_PercentOfCorrectAnswers.TabIndex = 12;
+            this.lb_PercentOfCorrectAnswers.Text = "Richtige Anworten in Prozent: %";
+            // 
+            // lb_WrongInput
+            // 
+            this.lb_WrongInput.AutoSize = true;
+            this.lb_WrongInput.Enabled = false;
+            this.lb_WrongInput.Location = new System.Drawing.Point(367, 101);
+            this.lb_WrongInput.Name = "lb_WrongInput";
+            this.lb_WrongInput.Size = new System.Drawing.Size(217, 15);
+            this.lb_WrongInput.TabIndex = 13;
+            this.lb_WrongInput.Text = "Eingabe kann nicht ausgewertet werden";
             // 
             // Form1
             // 
@@ -180,7 +205,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.gB_Auswertung);
+            this.Controls.Add(this.lb_WrongInput);
+            this.Controls.Add(this.gb_statistics);
             this.Controls.Add(this.lb_WrongRange);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.btn_Check);
@@ -194,8 +220,8 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Mathe Trainer";
-            this.gB_Auswertung.ResumeLayout(false);
-            this.gB_Auswertung.PerformLayout();
+            this.gb_statistics.ResumeLayout(false);
+            this.gb_statistics.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,10 +238,15 @@
         private System.Windows.Forms.Button btn_Check;
         private System.Windows.Forms.Button btn_Next;
         private System.Windows.Forms.Label lb_WrongRange;
-        private System.Windows.Forms.Label lb_Anzahl;
-        private System.Windows.Forms.Label lb_AnzahlRichtig;
-        private System.Windows.Forms.Label lb_AnzahlFalsch;
-        private System.Windows.Forms.GroupBox gB_Auswertung;
+        private System.Windows.Forms.Label lb_nrOfExercises;
+        private System.Windows.Forms.Label lb_nrOfExercisesRight;
+        private System.Windows.Forms.Label lb_nrOfExercisesWrong;
+        private System.Windows.Forms.GroupBox gb_Auswertung;
+        private System.Windows.Forms.Label lb_nrOfExercisesTrue;
+        private System.Windows.Forms.Label lb_nrOfExercisesWrite;
+        private System.Windows.Forms.GroupBox gb_statistics;
+        private System.Windows.Forms.Label lb_PercentOfCorrectAnswers;
+        private System.Windows.Forms.Label lb_WrongInput;
     }
 }
 
