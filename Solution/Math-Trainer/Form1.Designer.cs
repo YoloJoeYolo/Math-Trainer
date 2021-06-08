@@ -106,6 +106,7 @@
             this.txt_Result.Name = "txt_Result";
             this.txt_Result.Size = new System.Drawing.Size(169, 23);
             this.txt_Result.TabIndex = 3;
+            this.txt_Result.Tag = "test";
             // 
             // btn_Check
             // 
