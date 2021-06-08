@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// V1.2.1
+// V1.2.2
 namespace Math_Trainer
 {
     public partial class Form1 : Form
@@ -157,14 +157,6 @@ namespace Math_Trainer
             this.lb_InfoReset.Visible = false;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
