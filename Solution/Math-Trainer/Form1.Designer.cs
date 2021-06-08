@@ -57,6 +57,8 @@
             this.lb_Range.Size = new System.Drawing.Size(102, 21);
             this.lb_Range.TabIndex = 0;
             this.lb_Range.Text = "Zahlenweite:";
+            this.lb_Range.MouseEnter += new System.EventHandler(this.lb_Range_MouseEnter);
+            this.lb_Range.MouseLeave += new System.EventHandler(this.lb_Range_MouseLeave);
             // 
             // txt_Range
             // 
@@ -130,13 +132,13 @@
             // lb_WrongRange
             // 
             this.lb_WrongRange.AutoSize = true;
-            this.lb_WrongRange.Enabled = false;
             this.lb_WrongRange.Location = new System.Drawing.Point(12, 61);
             this.lb_WrongRange.Name = "lb_WrongRange";
             this.lb_WrongRange.Size = new System.Drawing.Size(223, 30);
             this.lb_WrongRange.TabIndex = 7;
             this.lb_WrongRange.Text = "Die Eingabe der Zahlenweite ist inkorekt, \r\nbitte geben sie nur eine positive Zah" +
     "l ein";
+            this.lb_WrongRange.Visible = false;
             // 
             // lb_nrOfExercises
             // 
@@ -165,7 +167,8 @@
             this.lb_nrOfExercisesWrong.Size = new System.Drawing.Size(120, 15);
             this.lb_nrOfExercisesWrong.TabIndex = 11;
             this.lb_nrOfExercisesWrong.Text = "0 Rechnungen falsch!";
-            this.lb_nrOfExercisesWrong.MouseHover += new System.EventHandler(this.lb_nrOfExercisesWrong_MouseHover);
+            this.lb_nrOfExercisesWrong.MouseEnter += new System.EventHandler(this.lb_nrOfExercisesWrong_MouseEnter);
+            this.lb_nrOfExercisesWrong.MouseLeave += new System.EventHandler(this.lb_nrOfExercisesWrong_MouseLeave);
             // 
             // gb_statistics
             // 
@@ -192,12 +195,12 @@
             // lb_WrongInput
             // 
             this.lb_WrongInput.AutoSize = true;
-            this.lb_WrongInput.Enabled = false;
             this.lb_WrongInput.Location = new System.Drawing.Point(367, 101);
             this.lb_WrongInput.Name = "lb_WrongInput";
             this.lb_WrongInput.Size = new System.Drawing.Size(217, 15);
             this.lb_WrongInput.TabIndex = 13;
             this.lb_WrongInput.Text = "Eingabe kann nicht ausgewertet werden";
+            this.lb_WrongInput.Visible = false;
             // 
             // Form1
             // 

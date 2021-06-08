@@ -31,11 +31,42 @@ namespace Math_Trainer
             try
             {
                 this.range = int.Parse(this.txt_Range.Text);
+                if (this.range <= 0)
+                {
+                    this.lb_WrongRange.Visible = true;
+                    resetToDefault();
+                }
+                else
+                {
+                    this.lb_WrongRange.Visible = false;
+                    this.txt_Invoice.BackColor = SystemColors.Control;
+                    this.txt_Result.ReadOnly = false;
+                    this.txt_Result.BackColor = SystemColors.Control;
+                    this.btn_Next.Enabled = true;
+                    this.btn_Next.BackColor = SystemColors.Control;
+                }
             }
             catch (Exception)
             {
-                this.range = 0;
+                this.lb_WrongRange.Visible = true;
+                resetToDefault();
             }
+        }
+        
+        public void resetToDefault()
+        {
+            this.range = 0;
+            this.nrOfExercises = 0;
+            this.nrOfExercisesRight = 0;
+            this.nrOfExercisesWrong = 0;
+            this.txt_Invoice.BackColor = SystemColors.ControlDark;
+            this.txt_Result.ReadOnly = true;
+            this.txt_Result.BackColor = SystemColors.ControlDark;
+            this.btn_Check.Enabled = false;
+            this.btn_Check.BackColor = SystemColors.ControlDark;
+            this.btn_Next.Enabled = false;
+            this.btn_Next.BackColor = SystemColors.ControlDark;
+            UpdateGUI();
         }
 
         private void btn_Check_Click(object sender, EventArgs e)
@@ -44,6 +75,8 @@ namespace Math_Trainer
             {
                 int result = int.Parse(this.txt_Result.Text);
                 this.lb_WrongInput.Enabled = false;
+                this.lb_Solution.Visible = false;
+                this.lb_TryAgain.Visible = false;
                 if (this.currentTask.getResult() == result)
                 {
                     if (this.nrOfTrys <= 2)
@@ -54,6 +87,8 @@ namespace Math_Trainer
                     {
                         this.nrOfExercisesWrong++;
                     }
+                    this.btn_Check.Enabled = false;
+                    this.btn_Check.BackColor = SystemColors.ControlDark;
                     this.btn_Next.Enabled = true;
                     this.btn_Next.BackColor = SystemColors.Control;
                 }
@@ -61,13 +96,12 @@ namespace Math_Trainer
                 {
                     if (this.nrOfExercises == 2)
                     {
-                        // LB mit Info nochmals Probieren
-                        throw new NotImplementedException();
+                        this.lb_TryAgain.Visible = true;
                     }
                     else
                     {
-                        // LB mit Lösung
-                        throw new NotImplementedException();
+                        this.lb_Solution.Text = "Ergebnis: " this.currentTask.getResult();
+                        this.lb_Solution.Visible = true;
                     }
                     // LB mit Info aufgeben
                     this.nrOfTrys++;
@@ -77,23 +111,21 @@ namespace Math_Trainer
             catch (Exception)
             {
                 this.lb_WrongInput.Enabled = true;
-                throw;
             }
             
         }
 
         private void btn_Next_Click(object sender, EventArgs e)
         {
-            if (this.range != 0 && !this.lb_WrongRange.Enabled)
-            {
-                this.currentTask = this.mtf.createTask(this.range, this.typOfExercise);
-                this.txt_Invoice.Text = currentTask.exercise();
-                this.nrOfExercises++;
-                UpdateGUI();
-                this.btn_Next.Enabled = false;
-                this.btn_Next.BackColor = SystemColors.ControlDark;
-                this.nrOfTrys = 1;
-            }
+            this.currentTask = this.mtf.createTask(this.range, this.typOfExercise);
+            this.txt_Invoice.Text = currentTask.exercise();
+            this.nrOfExercises++;
+            UpdateGUI();
+            this.btn_Next.Enabled = false;
+            this.btn_Next.BackColor = SystemColors.ControlDark;
+            this.nrOfTrys = 1;
+            this.btn_Check.Enabled = true;
+            this.btn_Check.BackColor = SystemColors.Control;
         }
 
         private void UpdateGUI()
@@ -104,10 +136,24 @@ namespace Math_Trainer
             this.lb_PercentOfCorrectAnswers.Text = "Percent of correct answers: " + ((double)this.nrOfExercisesRight / this.nrOfExercises * 100).ToString();
         }
 
-        private void lb_nrOfExercisesWrong_MouseHover(object sender, EventArgs e)
+        private void lb_nrOfExercisesWrong_MouseEnter(object sender, EventArgs e)
         {
-            // Info was alles als falsch beantwortet gilt, also nicht beim zweiten mal Richtig...
-            throw new NotImplementedException();
+            this.lb_InfoWrongAnswer.Visible = true;
+        }
+
+        private void lb_nrOfExercisesWrong_MouseLeave(object sender, EventArgs e)
+        {
+            this.lb_InfoWrongAnswer.Visible = false;
+        }
+
+        private void lb_Range_MouseEnter(object sender, EventArgs e)
+        {
+            this.lb_InfoReset.Visible = true;
+        }
+
+        private void lb_Range_MouseLeave(object sender, EventArgs e)
+        {
+            this.lb_InfoReset.Visible = false;
         }
     }
 }

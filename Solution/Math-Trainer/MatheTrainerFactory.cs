@@ -8,7 +8,6 @@ namespace Math_Trainer
     {
         public MatheTrainerFactory()
         {
-            //nichts zu tun
         }
 
         public MatheTrainer createTask(int Range, int typOfExercise)
@@ -18,6 +17,15 @@ namespace Math_Trainer
             {
                 case 0:
                     task = new AdditionTrainer(Range);
+                    return task;
+                case 1:
+                    task = new SubtractionTrainer(Range);
+                    return task;
+                case 2:
+                    task = new MultiplicationTrainer(Range);
+                    return task;
+                case 3:
+                    task = new DivisionTrainer(Range);
                     return task;
                 default:
                     Random rand = new Random();
