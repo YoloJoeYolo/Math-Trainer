@@ -73,6 +73,8 @@
             this.lb_Range.Size = new System.Drawing.Size(102, 21);
             this.lb_Range.TabIndex = 0;
             this.lb_Range.Text = "Zahlenweite:";
+            this.lb_Range.MouseEnter += new System.EventHandler(this.lb_Range_MouseEnter);
+            this.lb_Range.MouseLeave += new System.EventHandler(this.lb_Range_MouseLeave);
             // 
             // txt_Range
             // 
@@ -222,6 +224,7 @@
             this.lb_WrongInput.Size = new System.Drawing.Size(217, 15);
             this.lb_WrongInput.TabIndex = 13;
             this.lb_WrongInput.Text = "Eingabe kann nicht ausgewertet werden";
+            this.lb_WrongInput.Visible = false;
             // 
             // rB_Addition
             // 
