@@ -101,7 +101,7 @@ namespace Math_Trainer
                     }
                     else
                     {
-                        this.lb_Solution.Text = "Ergebnis: " +this.currentTask.getResult();
+                        this.lb_Solution.Text = "Korektes Ergebnis: " +Environment.NewLine +this.currentTask.getResult();
                         this.lb_Solution.Visible = true;
                     }
                     // LB mit Info aufgeben
@@ -158,5 +158,28 @@ namespace Math_Trainer
         }
 
 
+        private void rb_Mixed_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.rb_Addition.Checked)
+            {
+                this.typOfExercise = 0;
+            }
+            else if (this.rb_Subtraction.Checked)
+            {
+                this.typOfExercise = 1;
+            }
+            else if (this.rb_Multiplikation.Checked)
+            {
+                this.typOfExercise = 2;
+            }
+            else if (this.rb_Division.Checked)
+            {
+                this.typOfExercise = 3;
+            }
+            else
+            {
+                this.typOfExercise = 4;
+            }
+        }
     }
 }
