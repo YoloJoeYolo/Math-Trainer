@@ -52,15 +52,14 @@
             this.rb_Subtraction = new System.Windows.Forms.RadioButton();
             this.rb_Multiplikation = new System.Windows.Forms.RadioButton();
             this.lb_TryAgain = new System.Windows.Forms.Label();
-            this.gB_Einstellungen = new System.Windows.Forms.GroupBox();
-            this.rB_Mixed = new System.Windows.Forms.RadioButton();
-            this.rB_Division = new System.Windows.Forms.RadioButton();
+            this.gb_Einstellungen = new System.Windows.Forms.GroupBox();
+            this.rb_Mixed = new System.Windows.Forms.RadioButton();
+            this.rb_Division = new System.Windows.Forms.RadioButton();
             this.lb_InfoReset = new System.Windows.Forms.Label();
             this.lb_Solution = new System.Windows.Forms.Label();
-            this.bB_CalculatingForm = new System.Windows.Forms.GroupBox();
+            this.gb_CalculatingForm = new System.Windows.Forms.GroupBox();
             this.gb_Statistics.SuspendLayout();
-            this.gB_Einstellungen.SuspendLayout();
-            this.bB_CalculatingForm.SuspendLayout();
+            this.gb_Einstellungen.SuspendLayout();
             this.SuspendLayout();
             // 
             // lb_Range
@@ -245,14 +244,14 @@
             // 
             // rb_Addition
             // 
-            this.rB_Addition.AutoSize = true;
-            this.rB_Addition.Location = new System.Drawing.Point(17, 135);
-            this.rB_Addition.Name = "rB_Addition";
-            this.rB_Addition.Size = new System.Drawing.Size(73, 19);
-            this.rB_Addition.TabIndex = 14;
-            this.rB_Addition.TabStop = true;
-            this.rB_Addition.Text = "Addieren";
-            this.rB_Addition.UseVisualStyleBackColor = true;
+            this.rb_Addition.AutoSize = true;
+            this.rb_Addition.Location = new System.Drawing.Point(17, 135);
+            this.rb_Addition.Name = "rb_Addition";
+            this.rb_Addition.Size = new System.Drawing.Size(73, 19);
+            this.rb_Addition.TabIndex = 14;
+            this.rb_Addition.TabStop = true;
+            this.rb_Addition.Text = "Addieren";
+            this.rb_Addition.UseVisualStyleBackColor = true;
             // 
             // lb_type
             // 
@@ -283,25 +282,25 @@
             // 
             // rb_Subtraction
             // 
-            this.rB_Subtraction.AutoSize = true;
-            this.rB_Subtraction.Location = new System.Drawing.Point(17, 155);
-            this.rB_Subtraction.Name = "rB_Subtraction";
-            this.rB_Subtraction.Size = new System.Drawing.Size(86, 19);
-            this.rB_Subtraction.TabIndex = 18;
-            this.rB_Subtraction.TabStop = true;
-            this.rB_Subtraction.Text = "Subtraktion";
-            this.rB_Subtraction.UseVisualStyleBackColor = true;
+            this.rb_Subtraction.AutoSize = true;
+            this.rb_Subtraction.Location = new System.Drawing.Point(17, 155);
+            this.rb_Subtraction.Name = "rb_Subtraction";
+            this.rb_Subtraction.Size = new System.Drawing.Size(86, 19);
+            this.rb_Subtraction.TabIndex = 18;
+            this.rb_Subtraction.TabStop = true;
+            this.rb_Subtraction.Text = "Subtraktion";
+            this.rb_Subtraction.UseVisualStyleBackColor = true;
             // 
             // rb_Multiplikation
             // 
-            this.rB_Multiplikation.AutoSize = true;
-            this.rB_Multiplikation.Location = new System.Drawing.Point(17, 175);
-            this.rB_Multiplikation.Name = "rB_Multiplikation";
-            this.rB_Multiplikation.Size = new System.Drawing.Size(97, 19);
-            this.rB_Multiplikation.TabIndex = 19;
-            this.rB_Multiplikation.TabStop = true;
-            this.rB_Multiplikation.Text = "Multiplizieren";
-            this.rB_Multiplikation.UseVisualStyleBackColor = true;
+            this.rb_Multiplikation.AutoSize = true;
+            this.rb_Multiplikation.Location = new System.Drawing.Point(17, 175);
+            this.rb_Multiplikation.Name = "rb_Multiplikation";
+            this.rb_Multiplikation.Size = new System.Drawing.Size(97, 19);
+            this.rb_Multiplikation.TabIndex = 19;
+            this.rb_Multiplikation.TabStop = true;
+            this.rb_Multiplikation.Text = "Multiplizieren";
+            this.rb_Multiplikation.UseVisualStyleBackColor = true;
             // 
             // lb_TryAgain
             // 
@@ -317,44 +316,44 @@
             // 
             // gb_Einstellungen
             // 
-            this.gB_Einstellungen.BackColor = System.Drawing.SystemColors.Control;
-            this.gB_Einstellungen.Controls.Add(this.rB_Mixed);
-            this.gB_Einstellungen.Controls.Add(this.rB_Division);
-            this.gB_Einstellungen.Controls.Add(this.lb_InfoReset);
-            this.gB_Einstellungen.Controls.Add(this.lb_Range);
-            this.gB_Einstellungen.Controls.Add(this.txt_Range);
-            this.gB_Einstellungen.Controls.Add(this.rB_Subtraction);
-            this.gB_Einstellungen.Controls.Add(this.rB_Multiplikation);
-            this.gB_Einstellungen.Controls.Add(this.rB_Addition);
-            this.gB_Einstellungen.Controls.Add(this.lb_TypeOfCalculation);
-            this.gB_Einstellungen.Location = new System.Drawing.Point(12, 12);
-            this.gB_Einstellungen.Name = "gB_Einstellungen";
-            this.gB_Einstellungen.Size = new System.Drawing.Size(323, 252);
-            this.gB_Einstellungen.TabIndex = 21;
-            this.gB_Einstellungen.TabStop = false;
-            this.gB_Einstellungen.Text = "Einstellungen";
+            this.gb_Einstellungen.BackColor = System.Drawing.SystemColors.Control;
+            this.gb_Einstellungen.Controls.Add(this.rb_Mixed);
+            this.gb_Einstellungen.Controls.Add(this.rb_Division);
+            this.gb_Einstellungen.Controls.Add(this.lb_InfoReset);
+            this.gb_Einstellungen.Controls.Add(this.lb_Range);
+            this.gb_Einstellungen.Controls.Add(this.txt_Range);
+            this.gb_Einstellungen.Controls.Add(this.rb_Subtraction);
+            this.gb_Einstellungen.Controls.Add(this.rb_Multiplikation);
+            this.gb_Einstellungen.Controls.Add(this.rb_Addition);
+            this.gb_Einstellungen.Controls.Add(this.lb_TypeOfCalculation);
+            this.gb_Einstellungen.Location = new System.Drawing.Point(12, 12);
+            this.gb_Einstellungen.Name = "gb_Einstellungen";
+            this.gb_Einstellungen.Size = new System.Drawing.Size(323, 252);
+            this.gb_Einstellungen.TabIndex = 21;
+            this.gb_Einstellungen.TabStop = false;
+            this.gb_Einstellungen.Text = "Einstellungen";
             // 
-            // lb_Solution
+            // rb_Mixed
             // 
-            this.lb_Solution.AutoSize = true;
-            this.lb_Solution.Location = new System.Drawing.Point(260, 92);
-            this.lb_Solution.Name = "lb_Solution";
-            this.lb_Solution.Size = new System.Drawing.Size(61, 15);
-            this.lb_Solution.TabIndex = 22;
-            this.lb_Solution.Text = "Ergebenis:";
+            this.rb_Mixed.AutoSize = true;
+            this.rb_Mixed.Location = new System.Drawing.Point(17, 215);
+            this.rb_Mixed.Name = "rb_Mixed";
+            this.rb_Mixed.Size = new System.Drawing.Size(75, 19);
+            this.rb_Mixed.TabIndex = 25;
+            this.rb_Mixed.TabStop = true;
+            this.rb_Mixed.Text = "Gemischt";
+            this.rb_Mixed.UseVisualStyleBackColor = true;
             // 
-            // lb_InfoWrongAnswer
+            // rb_Division
             // 
-            this.lb_InfoWrongAnswer.AutoSize = true;
-            this.lb_InfoWrongAnswer.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.lb_InfoWrongAnswer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lb_InfoWrongAnswer.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_InfoWrongAnswer.Location = new System.Drawing.Point(39, 114);
-            this.lb_InfoWrongAnswer.Name = "lb_InfoWrongAnswer";
-            this.lb_InfoWrongAnswer.Size = new System.Drawing.Size(231, 15);
-            this.lb_InfoWrongAnswer.TabIndex = 23;
-            this.lb_InfoWrongAnswer.Text = "Ab 2 Versuche gilt die Rechnung als Falsch!";
-            this.lb_InfoWrongAnswer.Visible = false;
+            this.rb_Division.AutoSize = true;
+            this.rb_Division.Location = new System.Drawing.Point(17, 195);
+            this.rb_Division.Name = "rb_Division";
+            this.rb_Division.Size = new System.Drawing.Size(78, 19);
+            this.rb_Division.TabIndex = 24;
+            this.rb_Division.TabStop = true;
+            this.rb_Division.Text = "Dividieren";
+            this.rb_Division.UseVisualStyleBackColor = true;
             // 
             // lb_InfoReset
             // 
@@ -369,45 +368,22 @@
             this.lb_InfoReset.Text = "Sobald die Zahlenweite geändert wurde,\r\nwird die Statistik zurückgesetzt!";
             this.lb_InfoReset.Visible = false;
             // 
-            // groupBox1
+            // lb_Solution
             // 
-            this.groupBox1.Controls.Add(this.lb_Invoice);
-            this.groupBox1.Controls.Add(this.lb_Solution);
-            this.groupBox1.Controls.Add(this.txt_Invoice);
-            this.groupBox1.Controls.Add(this.lb_Result);
-            this.groupBox1.Controls.Add(this.txt_Result);
-            this.groupBox1.Controls.Add(this.lb_TryAgain);
-            this.groupBox1.Controls.Add(this.btn_Check);
-            this.groupBox1.Controls.Add(this.btn_Next);
-            this.groupBox1.Controls.Add(this.lb_WrongInput);
-            this.groupBox1.Location = new System.Drawing.Point(376, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(377, 254);
-            this.groupBox1.TabIndex = 23;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.lb_Solution.AutoSize = true;
+            this.lb_Solution.Location = new System.Drawing.Point(260, 92);
+            this.lb_Solution.Name = "lb_Solution";
+            this.lb_Solution.Size = new System.Drawing.Size(61, 15);
+            this.lb_Solution.TabIndex = 22;
+            this.lb_Solution.Text = "Ergebenis:";
             // 
-            // rB_Division
+            // gb_CalculatingForm
             // 
-            this.rB_Division.AutoSize = true;
-            this.rB_Division.Location = new System.Drawing.Point(17, 195);
-            this.rB_Division.Name = "rB_Division";
-            this.rB_Division.Size = new System.Drawing.Size(78, 19);
-            this.rB_Division.TabIndex = 24;
-            this.rB_Division.TabStop = true;
-            this.rB_Division.Text = "Dividieren";
-            this.rB_Division.UseVisualStyleBackColor = true;
-            // 
-            // rB_Mixed
-            // 
-            this.rB_Mixed.AutoSize = true;
-            this.rB_Mixed.Location = new System.Drawing.Point(17, 215);
-            this.rB_Mixed.Name = "rB_Mixed";
-            this.rB_Mixed.Size = new System.Drawing.Size(75, 19);
-            this.rB_Mixed.TabIndex = 25;
-            this.rB_Mixed.TabStop = true;
-            this.rB_Mixed.Text = "Gemischt";
-            this.rB_Mixed.UseVisualStyleBackColor = true;
+            this.gb_CalculatingForm.Location = new System.Drawing.Point(376, 19);
+            this.gb_CalculatingForm.Name = "gb_CalculatingForm";
+            this.gb_CalculatingForm.Size = new System.Drawing.Size(200, 100);
+            this.gb_CalculatingForm.TabIndex = 0;
+            this.gb_CalculatingForm.TabStop = false;
             // 
             // Form1
             // 
@@ -415,22 +391,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.gB_Einstellungen);
+            this.Controls.Add(this.gb_Einstellungen);
             this.Controls.Add(this.lb_WrongRange);
             this.Controls.Add(this.lb_typeOfCalcualtion);
             this.Controls.Add(this.lb_type);
             this.Controls.Add(this.gb_Statistics);
+            this.Controls.Add(this.gb_CalculatingForm);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Mathe Trainer";
             this.gb_Statistics.ResumeLayout(false);
             this.gb_Statistics.PerformLayout();
-            this.gB_Einstellungen.ResumeLayout(false);
-            this.gB_Einstellungen.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gb_Einstellungen.ResumeLayout(false);
+            this.gb_Einstellungen.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,6 +444,16 @@
         private System.Windows.Forms.RadioButton rb_Division;
         private System.Windows.Forms.Label lb_InfoReset;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gB_Einstellungen;
+        private System.Windows.Forms.GroupBox gb_CalculatingForm;
+        private System.Windows.Forms.RadioButton rB_Subtraction;
+        private System.Windows.Forms.RadioButton rB_Addition;
+        private System.Windows.Forms.RadioButton rB_Multiplikation;
+        private System.Windows.Forms.RadioButton rB_Division;
+        private System.Windows.Forms.RadioButton rB_Mixed;
+
+
+        
     }
 }
 
