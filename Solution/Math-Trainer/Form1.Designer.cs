@@ -42,8 +42,8 @@
             this.lb_NrOfExercisesRight = new System.Windows.Forms.Label();
             this.lb_NrOfExercisesWrong = new System.Windows.Forms.Label();
             this.gb_Statistics = new System.Windows.Forms.GroupBox();
-            this.lb_InfoWrongAnswer = new System.Windows.Forms.Label();
             this.lb_PercentOfCorrectAnswers = new System.Windows.Forms.Label();
+            this.lb_InfoWrongAnswer = new System.Windows.Forms.Label();
             this.lb_WrongInput = new System.Windows.Forms.Label();
             this.rb_Addition = new System.Windows.Forms.RadioButton();
             this.lb_type = new System.Windows.Forms.Label();
@@ -60,6 +60,7 @@
             this.gb_CalculatingForm = new System.Windows.Forms.GroupBox();
             this.gb_Statistics.SuspendLayout();
             this.gb_Einstellungen.SuspendLayout();
+            this.gb_CalculatingForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // lb_Range
@@ -89,7 +90,7 @@
             this.lb_Invoice.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.lb_Invoice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lb_Invoice.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lb_Invoice.Location = new System.Drawing.Point(11, 29);
+            this.lb_Invoice.Location = new System.Drawing.Point(6, 19);
             this.lb_Invoice.Name = "lb_Invoice";
             this.lb_Invoice.Size = new System.Drawing.Size(87, 21);
             this.lb_Invoice.TabIndex = 2;
@@ -98,7 +99,7 @@
             // txt_Invoice
             // 
             this.txt_Invoice.BackColor = System.Drawing.SystemColors.Control;
-            this.txt_Invoice.Location = new System.Drawing.Point(11, 53);
+            this.txt_Invoice.Location = new System.Drawing.Point(13, 43);
             this.txt_Invoice.Name = "txt_Invoice";
             this.txt_Invoice.ReadOnly = true;
             this.txt_Invoice.Size = new System.Drawing.Size(169, 23);
@@ -108,7 +109,7 @@
             // 
             this.lb_Result.AutoSize = true;
             this.lb_Result.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lb_Result.Location = new System.Drawing.Point(11, 87);
+            this.lb_Result.Location = new System.Drawing.Point(16, 86);
             this.lb_Result.Name = "lb_Result";
             this.lb_Result.Size = new System.Drawing.Size(77, 21);
             this.lb_Result.TabIndex = 4;
@@ -117,7 +118,7 @@
             // txt_Result
             // 
             this.txt_Result.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txt_Result.Location = new System.Drawing.Point(11, 116);
+            this.txt_Result.Location = new System.Drawing.Point(13, 110);
             this.txt_Result.Name = "txt_Result";
             this.txt_Result.Size = new System.Drawing.Size(169, 23);
             this.txt_Result.TabIndex = 3;
@@ -194,30 +195,17 @@
             // gb_Statistics
             // 
             this.gb_Statistics.BackColor = System.Drawing.SystemColors.Control;
-            this.gb_Statistics.Controls.Add(this.lb_InfoWrongAnswer);
             this.gb_Statistics.Controls.Add(this.lb_PercentOfCorrectAnswers);
             this.gb_Statistics.Controls.Add(this.lb_NrOfExercises);
             this.gb_Statistics.Controls.Add(this.lb_NrOfExercisesWrong);
             this.gb_Statistics.Controls.Add(this.lb_NrOfExercisesRight);
+            this.gb_Statistics.Controls.Add(this.lb_InfoWrongAnswer);
             this.gb_Statistics.Location = new System.Drawing.Point(376, 280);
             this.gb_Statistics.Name = "gb_Statistics";
             this.gb_Statistics.Size = new System.Drawing.Size(366, 158);
             this.gb_Statistics.TabIndex = 12;
             this.gb_Statistics.TabStop = false;
             this.gb_Statistics.Text = "Auswertung";
-            // 
-            // lb_InfoWrongAnswer
-            // 
-            this.lb_InfoWrongAnswer.AutoSize = true;
-            this.lb_InfoWrongAnswer.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.lb_InfoWrongAnswer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lb_InfoWrongAnswer.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lb_InfoWrongAnswer.Location = new System.Drawing.Point(39, 114);
-            this.lb_InfoWrongAnswer.Name = "lb_InfoWrongAnswer";
-            this.lb_InfoWrongAnswer.Size = new System.Drawing.Size(231, 15);
-            this.lb_InfoWrongAnswer.TabIndex = 23;
-            this.lb_InfoWrongAnswer.Text = "Ab 2 Versuche gilt die Rechnung als Falsch!";
-            this.lb_InfoWrongAnswer.Visible = false;
             // 
             // lb_PercentOfCorrectAnswers
             // 
@@ -228,6 +216,19 @@
             this.lb_PercentOfCorrectAnswers.Size = new System.Drawing.Size(225, 20);
             this.lb_PercentOfCorrectAnswers.TabIndex = 12;
             this.lb_PercentOfCorrectAnswers.Text = "Richtige Antworten in Prozent: %";
+            // 
+            // lb_InfoWrongAnswer
+            // 
+            this.lb_InfoWrongAnswer.AutoSize = true;
+            this.lb_InfoWrongAnswer.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.lb_InfoWrongAnswer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lb_InfoWrongAnswer.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lb_InfoWrongAnswer.Location = new System.Drawing.Point(45, 114);
+            this.lb_InfoWrongAnswer.Name = "lb_InfoWrongAnswer";
+            this.lb_InfoWrongAnswer.Size = new System.Drawing.Size(231, 15);
+            this.lb_InfoWrongAnswer.TabIndex = 23;
+            this.lb_InfoWrongAnswer.Text = "Ab 2 Versuche gilt die Rechnung als Falsch!";
+            this.lb_InfoWrongAnswer.Visible = false;
             // 
             // lb_WrongInput
             // 
@@ -307,7 +308,7 @@
             this.lb_TryAgain.AutoSize = true;
             this.lb_TryAgain.BackColor = System.Drawing.Color.Transparent;
             this.lb_TryAgain.ForeColor = System.Drawing.Color.Red;
-            this.lb_TryAgain.Location = new System.Drawing.Point(232, 109);
+            this.lb_TryAgain.Location = new System.Drawing.Point(260, 61);
             this.lb_TryAgain.Name = "lb_TryAgain";
             this.lb_TryAgain.Size = new System.Drawing.Size(106, 30);
             this.lb_TryAgain.TabIndex = 20;
@@ -371,7 +372,7 @@
             // lb_Solution
             // 
             this.lb_Solution.AutoSize = true;
-            this.lb_Solution.Location = new System.Drawing.Point(260, 92);
+            this.lb_Solution.Location = new System.Drawing.Point(260, 46);
             this.lb_Solution.Name = "lb_Solution";
             this.lb_Solution.Size = new System.Drawing.Size(61, 15);
             this.lb_Solution.TabIndex = 22;
@@ -379,11 +380,21 @@
             // 
             // gb_CalculatingForm
             // 
-            this.gb_CalculatingForm.Location = new System.Drawing.Point(376, 19);
+            this.gb_CalculatingForm.Controls.Add(this.lb_TryAgain);
+            this.gb_CalculatingForm.Controls.Add(this.txt_Invoice);
+            this.gb_CalculatingForm.Controls.Add(this.lb_Invoice);
+            this.gb_CalculatingForm.Controls.Add(this.lb_Result);
+            this.gb_CalculatingForm.Controls.Add(this.txt_Result);
+            this.gb_CalculatingForm.Controls.Add(this.btn_Check);
+            this.gb_CalculatingForm.Controls.Add(this.btn_Next);
+            this.gb_CalculatingForm.Controls.Add(this.lb_WrongInput);
+            this.gb_CalculatingForm.Controls.Add(this.lb_Solution);
+            this.gb_CalculatingForm.Location = new System.Drawing.Point(376, 12);
             this.gb_CalculatingForm.Name = "gb_CalculatingForm";
-            this.gb_CalculatingForm.Size = new System.Drawing.Size(200, 100);
+            this.gb_CalculatingForm.Size = new System.Drawing.Size(366, 252);
             this.gb_CalculatingForm.TabIndex = 0;
             this.gb_CalculatingForm.TabStop = false;
+            this.gb_CalculatingForm.Text = "Rechnung";
             // 
             // Form1
             // 
@@ -405,6 +416,8 @@
             this.gb_Statistics.PerformLayout();
             this.gb_Einstellungen.ResumeLayout(false);
             this.gb_Einstellungen.PerformLayout();
+            this.gb_CalculatingForm.ResumeLayout(false);
+            this.gb_CalculatingForm.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
