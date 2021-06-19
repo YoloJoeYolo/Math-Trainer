@@ -9,7 +9,7 @@ namespace Math_Trainer
         public MultiplicationTrainer(int trainingRange) : base(trainingRange)
         {
             Random rand = new Random();
-            do // In einer Schleife wird die Rechnung solange generiert, bis das ergebnis <= trainingRange
+            do
             {
                 this.operand1 = rand.Next(trainingRange + 1);
                 this.operand2 = rand.Next(trainingRange + 1);
