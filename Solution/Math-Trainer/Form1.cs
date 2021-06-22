@@ -83,7 +83,7 @@ namespace Math_Trainer
             try     // Sicherung damit das Programm bei falschen Eingaben nicht crashed
             {
                 int result = int.Parse(this.txt_Result.Text);
-                this.lb_WrongInput.Enabled = false;
+                this.lb_WrongInput.Visible = false;
                 this.lb_SolutionValue.Visible = false;
                 this.lb_TryAgain.Visible = false;
                 if (this.currentTask.getResult() == result)     // richtig geantwortet
@@ -120,7 +120,18 @@ namespace Math_Trainer
             }
             catch (Exception)
             {
-                this.lb_WrongInput.Enabled = true;
+                this.lb_WrongInput.Visible = true;
+                if (this.nrOfTrys == 1)
+                {
+                     this.lb_TryAgain.Visible = true;
+                }
+                else
+                {
+                    this.lb_SolutionValue.Text = this.currentTask.getResult().ToString();
+                    this.lb_SolutionValue.Visible = true;
+                 }
+                this.nrOfTrys++;
+                this.txt_Result.Text = "";
             }
             
         }
@@ -205,6 +216,11 @@ namespace Math_Trainer
         private void lb_TypeOfCalculation_MouseLeave(object sender, EventArgs e)
         {
             this.lb_InfoTypeOfCalculation.Visible = false;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

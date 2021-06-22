@@ -360,7 +360,6 @@
             this.lb_WrongInput.AutoSize = true;
             this.lb_WrongInput.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lb_WrongInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lb_WrongInput.Enabled = false;
             this.lb_WrongInput.ForeColor = System.Drawing.Color.Red;
             this.lb_WrongInput.Location = new System.Drawing.Point(13, 123);
             this.lb_WrongInput.Name = "lb_WrongInput";
@@ -509,6 +508,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Mathe Trainer";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.gb_Statistics.ResumeLayout(false);
             this.gb_Statistics.PerformLayout();
             this.gb_Diagram.ResumeLayout(false);
