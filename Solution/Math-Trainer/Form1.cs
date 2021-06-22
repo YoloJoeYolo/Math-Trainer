@@ -86,7 +86,7 @@ namespace Math_Trainer
                 this.lb_WrongInput.Visible = false;
                 this.lb_SolutionValue.Visible = false;
                 this.lb_TryAgain.Visible = false;
-                if (this.currentTask.getResult() == result)     // richtig geantwortet
+                if (this.currentTask.getResult().ToString() == this.txt_Result.Text)     // richtig geantwortet
                 {
                     if (this.nrOfTrys <= 2)     // wenn man weniger als zwei Versuche gebraucht hat, hat man die Rechnung richtig gelöst
                     {
